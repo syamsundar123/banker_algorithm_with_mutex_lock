@@ -78,12 +78,15 @@ The  thread is now sleeping
 
 Process P1 :
     Allocated     => [0, 1, 0]
+    
     Available     => [3, 3, 2]
     Need          => [1, 2, 2]
     Resource Allocated!  
     Process Code Running..
+    
 Thread is finished
     Process Code Completed...
+    
     Process Releasing Resource...
  
     Resource Released!
