@@ -23,39 +23,52 @@ Enter the allocated value of the each process one by one
 For process  P0 =>
 
 0 1 0
+
 For process  P1 =>
 
 2 0 0
+
 For process  P2 =>
 
 3 0 2
+
 For process  P3 =>
 
 2 1 1
+
 For process  P4 =>
 
 0 0 2
+
 -------------------------------------------------------------------
 Enter the Maximum needed value by the process
 For process  P0 =>
 
 7 5 3
+
 For process  P1 =>
 
 3 2 2
+
 For process  P2 =>
 
 9 0 2
+
 For process  P3 =>
 
 2 2 2
+
 For process  P4 =>
 
 4 3 3
+
 -------------------------------------------------------------------
 Enter the available resource
+
 3 3 2
+
 Safe sequence is =>
+
 P1 P3 P4 P0 P2
 
 
