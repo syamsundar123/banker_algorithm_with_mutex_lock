@@ -4,9 +4,11 @@ Write a multithreaded program that implements the banker's algorithm. Create n t
 
 
 Enter The Number Of The Process To Be Executed:-
+
 5
 -------------------------------------------------------------------
 Enter The Name Of The Process:-
+
 P0 P1 P2 P3 P4
 -------------------------------------------------------------------
 Enter The Number of resource:-
