@@ -97,16 +97,16 @@ Thread is finished
 The  thread is now sleeping
 
 Process P3 :
-    Allocated     => [2, 0, 0]
 
+    Allocated     => [2, 0, 0]
     Available     => [3, 4, 2]
     Need          => [0, 1, 1]
     Resource Allocated!  
     Process Code Running..
 Thread is finished
+
     Process Code Completed...
     Process Releasing Resource...
- 
     Resource Released!
     New Available => [5, 4, 2]
 
@@ -116,15 +116,17 @@ The  thread is now sleeping
 
 
 Process P4 :
-    Allocated     => [3, 0, 2]
+
+    Allocated     => [3, 0, 2] 
     Available     => [5, 4, 2]
     Need          => [4, 3, 1]
     Resource Allocated!  
     Process Code Running..
+    
 Thread is finished
+
     Process Code Completed...
     Process Releasing Resource...
- 
     Resource Released!
     New Available => [8, 4, 4]
 
@@ -134,15 +136,17 @@ The  thread is now sleeping
 
 
 Process P0 :
+
     Allocated     => [2, 1, 1]
     Available     => [8, 4, 4]
     Need          => [7, 4, 3]
     Resource Allocated!  
     Process Code Running..
+    
 Thread is finished
+
     Process Code Completed...
     Process Releasing Resource...
- 
     Resource Released!
     New Available => [10, 5, 5]
 
@@ -152,14 +156,16 @@ The  thread is now sleeping
 
 Process
  P2 :
+ 
     Allocated     => [0, 0, 2]
     Available     => [10, 5, 5]
     Need          => [6, 0, 0]
     Resource Allocated!  
     Process Code Running..
+    
 Thread is finished
+
     Process Code Completed...
     Process Releasing Resource...
- 
     Resource Released!
     New Available => [10, 5, 7]
