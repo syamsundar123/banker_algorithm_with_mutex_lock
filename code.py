@@ -2,14 +2,28 @@ import threading, time, random
 import time
 import os 
 
+class color:
+   Purple = '\033[95m'
+   Cyan = '\033[96m'
+   Darkcyan = '\033[36m'
+   Blue = '\033[94m'
+   Green = '\033[92m'
+   Yellow = '\033[93m'
+   Red = '\033[91m'
+   Bold = '\033[1m'
+   Underline = '\033[4m'
+   End = '\033[0m'
 
 
+my_mutex = threading.Lock()
 
 class thread_one(threading.Thread):
     def run(self):
-        print ("The  thread is now sleeping\n")
+        global my_mutex
+        print (color.Bold+color.Green+"The  thread is now sleeping\n"+color.End)
         time.sleep(3)
-        print("Thread is finished")
+        print(color.Bold+color.Red+"Thread is finished"+color.End)
+        my_mutex.release()
 
 
 print("Enter The Number Of The Process To Be Executed")
@@ -105,6 +119,7 @@ if Inspect_Value==1:
     
 
     for i in range(len(Safe_Sequence)):
+        my_mutex.acquire()
 
         t1 = thread_one()
         t1.start()
