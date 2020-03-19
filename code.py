@@ -5,7 +5,11 @@ import os
 
 
 
-
+class thread_one(threading.Thread):
+    def run(self):
+        print ("The  thread is now sleeping\n")
+        time.sleep(3)
+        print("Thread is finished")
 
 
 print("Enter The Number Of The Process To Be Executed")
@@ -96,3 +100,33 @@ else:
     print(*Safe_Sequence,sep=" ")
     print("\n\n")
 
+NewAvailable=AvailableCopy
+if Inspect_Value==1:
+    
+
+    for i in range(len(Safe_Sequence)):
+
+        t1 = thread_one()
+        t1.start()
+        AllocatedCopy=Allocated_Value[i]
+        
+        print("\nProcess",Safe_Sequence[i],":")
+        j=Processes.index(Safe_Sequence[i])
+        print("    Allocated     =>",Allocated_Value[i])
+        print("    Available     =>",NewAvailable)
+        print("    Need          =>",NeedCopy[j])
+        time.sleep(1)
+        print("    Resource Allocated!  ") 
+        time.sleep(1)
+        print("    Process Code Running..")  
+        time.sleep(1)
+        print("    Process Code Completed...\n    Process Releasing Resource...\n ")
+        time.sleep(1)
+        print("    Resource Released!")
+        for i in range(len(Resources)):
+            NewAvailable[i]=AllocatedCopy[i]+NewAvailable[i]
+        time.sleep(1)
+        print("    New Available =>",NewAvailable)
+        print("\n\n")
+        time.sleep(2)
+    
