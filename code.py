@@ -21,7 +21,7 @@ class thread_one(threading.Thread):#Thread creation class
         my_mutex.release()
 
 
-print("Enter The Number Of The Process To Be Executed")
+print("Enter The Number Of The Process ")
 m=int(input())
 print("-------------------------------------------------------------------")
 
@@ -41,7 +41,7 @@ Allocated_Value=[]#The array will store the allocated value
 MaxValue=[]#The array will store the MAximum value
 Need_Value=[]#The array will store the Needed value
 
-print("Enter the allocated value of the each process one by one")
+print("Enter the allocated value  ")
 for i in range(m):
     print("For process ",Processes[i],"=>")
     Allocated_Value.append(list(map(int,input().strip().split())))
