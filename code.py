@@ -3,26 +3,21 @@ import time
 import os 
 
 class color:
-   Purple = '\033[95m'
-   Cyan = '\033[96m'
-   Darkcyan = '\033[36m'
-   Blue = '\033[94m'
-   Green = '\033[92m'
-   Yellow = '\033[93m'
-   Red = '\033[91m'
-   Bold = '\033[1m'
-   Underline = '\033[4m'
-   End = '\033[0m'
+   #This is decoration class
+   Greeen = '\033[92m'
+   Reed = '\033[91m'
+   Bolld = '\033[1m'
+   Ennd = '\033[0m'
 
 
 my_mutex = threading.Lock()
 
-class thread_one(threading.Thread):
+class thread_one(threading.Thread):#Thread creation class
     def run(self):
         global my_mutex
-        print (color.Bold+color.Green+"The  thread is now sleeping\n"+color.End)
+        print (color.Bolld+color.Greeen+"The  thread is now sleeping\n"+color.Ennd)
         time.sleep(3)
-        print(color.Bold+color.Red+"Thread is finished"+color.End)
+        print(color.Bolld+color.Reed+"Thread is finished"+color.Ennd)
         my_mutex.release()
 
 
@@ -42,9 +37,9 @@ print("Enter The Resource Name")
 Resources=input().strip().split()
 print("-------------------------------------------------------------------")
 
-Allocated_Value=[]
-MaxValue=[]
-Need_Value=[]
+Allocated_Value=[]#The array will store the allocated value
+MaxValue=[]#The array will store the MAximum value
+Need_Value=[]#The array will store the Needed value
 
 print("Enter the allocated value of the each process one by one")
 for i in range(m):
@@ -70,7 +65,7 @@ for i in range(m):
     
 NeedCopy=Need_Value[:]    
     
-def Executed():
+def Executed():#This will check for the checking of safe class
   
     Unable=[]
     Out=1
@@ -118,7 +113,7 @@ NewAvailable=AvailableCopy
 if Inspect_Value==1:
     
 
-    for i in range(len(Safe_Sequence)):
+    for i in range(len(Safe_Sequence)):#after the safe sequence is done this will execute process using mutex lock
         my_mutex.acquire()
 
         t1 = thread_one()
